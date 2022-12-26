@@ -4,6 +4,7 @@ import IdentifyForm from "./components/IdentifyForm";
 import AnimatedImage from "./components/AnimatedImage";
 
 import Right from "@/assets/right.png";
+
 import { Link } from "react-router-dom";
 
 const IdentifyPage = () => {
