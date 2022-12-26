@@ -1,11 +1,10 @@
 import Right from "@/assets/right.png";
 import Left from "@/assets/left.png";
 
-import Layout from "@/components/Layout";
+import { Layout, NavButtons } from "@/components";
 import AnimatedImage from "./components/AnimatedImage";
 import CovidForm from "./components/CovidForm";
 import { Link } from "react-router-dom";
-import NavButtons from "@/components/NavButtons";
 
 const CovidQuestionsPage = () => {
   return (

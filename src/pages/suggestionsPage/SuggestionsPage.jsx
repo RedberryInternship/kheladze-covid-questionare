@@ -1,5 +1,4 @@
-import Layout from "@/components/Layout";
-import NavButtons from "@/components/NavButtons";
+import { NavButtons, Layout } from "@/components";
 import Left from "@/assets/left.png";
 import AnimatedImage from "./components/AnimatedImage";
 import SuggestionForm from "./components/SuggestionForm";

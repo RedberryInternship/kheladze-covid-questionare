@@ -1,5 +1,4 @@
-import Input from "@/components/Input";
-import Radio from "@/components/Radio";
+import { Radio, Input } from "@/components";
 
 const CovidForm = () => {
   const hadCovid = (

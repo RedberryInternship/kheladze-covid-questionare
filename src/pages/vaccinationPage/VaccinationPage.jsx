@@ -1,5 +1,4 @@
-import Layout from "@/components/Layout";
-import NavButtons from "@/components/NavButtons";
+import { Layout, NavButtons } from "@/components";
 
 import Right from "@/assets/right.png";
 import Left from "@/assets/left.png";

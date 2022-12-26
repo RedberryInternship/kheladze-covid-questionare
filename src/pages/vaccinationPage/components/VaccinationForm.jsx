@@ -1,4 +1,4 @@
-import Radio from "@/components/Radio";
+import { Radio } from "@/components";
 
 const VaccinationForm = () => {
   const hadVaccine = (
