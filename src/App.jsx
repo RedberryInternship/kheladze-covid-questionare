@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 
-import CovidQuestionsPage from "./pages/covidQuestionsPage/CovidQuestionsPage";
-import IdentifyPage from "./pages/identifyPage/identifyPage";
-import LandingPage from "./pages/landingPage/LandingPage";
-import SuggestionsPage from "./pages/suggestionsPage/suggestionsPage";
-import NotFound from "./pages/notFound/NotFound";
-import Thanks from "./pages/thanks/thanks";
-import VaccinationPage from "./pages/vaccinationPage/vaccinationPage";
+import {
+  LandingPage,
+  IdentifyPage,
+  CovidQuestionsPage,
+  VaccinationPage,
+  SuggestionsPage,
+  Thanks,
+  NotFound,
+} from "./pages";
 
 function App() {
   return (
