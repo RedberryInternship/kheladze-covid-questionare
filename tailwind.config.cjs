@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        513: "513px",
-        606: "600px",
+        513: "32.0625rem",
+        606: "37.5rem",
       },
       height: {
-        111: "1px",
-        750: "750px",
+        111: "0.063rem",
+        750: "46.875rem",
       },
       fontSize: {
-        22: "22px",
+        22: "1.375rem",
       },
     },
   },

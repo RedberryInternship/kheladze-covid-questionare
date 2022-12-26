@@ -1,8 +1,8 @@
 import Layout from "@/components/Layout";
 import NavButtons from "@/components/NavButtons";
 
-import right from "@/assets/right.png";
-import left from "@/assets/left.png";
+import Right from "@/assets/right.png";
+import Left from "@/assets/left.png";
 
 import VaccinationForm from "./components/VaccinationForm";
 import AnimatedImage from "./components/AnimatedImage";
@@ -15,10 +15,10 @@ const VaccinationPage = () => {
       <AnimatedImage />
       <NavButtons>
         <Link to="/covid-questions">
-          <img src={left} />
+          <img src={Left} />
         </Link>
         <Link to="/suggestions">
-          <img src={right} />
+          <img src={Right} />
         </Link>
       </NavButtons>
     </Layout>

@@ -26,12 +26,10 @@ body {
 }
 
 * {
-  margin: 0;
-  padding: 0;
   color: #232323;
 }
 
-.container {
+.radio-input-container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -43,7 +41,7 @@ body {
   user-select: none;
 }
 
-.container input {
+.radio-input-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -60,11 +58,11 @@ body {
   border-radius: 50%;
 }
 
-.container:hover input ~ .checkmark {
+.radio-input-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-.container input:checked ~ .checkmark {
+.radio-input-container input:checked ~ .checkmark {
   background-color: inherit;
 }
 
@@ -74,11 +72,11 @@ body {
   display: none;
 }
 
-.container input:checked ~ .checkmark:after {
+.radio-input-container input:checked ~ .checkmark:after {
   display: block;
 }
 
-.container .checkmark:after {
+.radio-input-container .checkmark:after {
   top: 2px;
   left: 2px;
   width: 17px;

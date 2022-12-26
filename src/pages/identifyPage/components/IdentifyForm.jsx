@@ -1,5 +1,5 @@
 import Input from "@/components/Input";
-import line from "@/assets/lin.png";
+import Line from "@/assets/lin.png";
 
 const IdentifyForm = () => {
   return (
@@ -23,7 +23,7 @@ const IdentifyForm = () => {
         placeholder="fbi@redberry.ge"
       />
       <p className="w-80 text-zinc-600 text-base font-bold mt-16">
-        <img className="h-111 w-60 mb-5" src={line} />
+        <img className="h-111 w-60 mb-5" src={Line} />
         *-ით მონიშნული ველების შევსება სავალდებულოა
       </p>
     </form>

@@ -1,5 +1,5 @@
-import right from "@/assets/right.png";
-import left from "@/assets/left.png";
+import Right from "@/assets/right.png";
+import Left from "@/assets/left.png";
 
 import Layout from "@/components/Layout";
 import AnimatedImage from "./components/AnimatedImage";
@@ -16,10 +16,10 @@ const CovidQuestionsPage = () => {
       </div>
       <NavButtons>
         <Link to="/identify">
-          <img src={left} />
+          <img src={Left} />
         </Link>
         <Link to="/vaccination">
-          <img src={right} />
+          <img src={Right} />
         </Link>
       </NavButtons>
     </Layout>
