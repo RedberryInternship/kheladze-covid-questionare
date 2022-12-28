@@ -1,11 +1,7 @@
-import { NavButtons, Layout } from "@/components";
+import { Layout } from "@/components";
 
 import IdentifyForm from "./components/IdentifyForm";
 import AnimatedImage from "./components/AnimatedImage";
-
-import Right from "@/assets/right.png";
-
-import { Link } from "react-router-dom";
 
 const IdentifyPage = () => {
   return (
@@ -14,11 +10,6 @@ const IdentifyPage = () => {
         <IdentifyForm />
         <AnimatedImage />
       </div>
-      <NavButtons>
-        <Link to="/covid-questions">
-          <img src={Right} />
-        </Link>
-      </NavButtons>
     </Layout>
   );
 };
