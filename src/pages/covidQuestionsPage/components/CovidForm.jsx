@@ -76,7 +76,6 @@ const CovidForm = () => {
 
     const { had_antibody_test, had_covid, ...testDate_number } = data;
 
-    console.log(testDate_number);
     if (watchAntibody === "true") {
       let antibodies = null;
       if (testDate_number.test_date) {
