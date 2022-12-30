@@ -4,7 +4,7 @@ import CovidForm from "./components/CovidForm";
 
 const CovidQuestionsPage = () => {
   return (
-    <Layout>
+    <Layout num={2}>
       <div className="flex justify-between">
         <CovidForm />
         <AnimatedImage />

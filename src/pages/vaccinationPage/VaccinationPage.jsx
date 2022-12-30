@@ -5,7 +5,7 @@ import AnimatedImage from "./components/AnimatedImage";
 
 const VaccinationPage = () => {
   return (
-    <Layout>
+    <Layout num={3}>
       <VaccinationForm />
       <AnimatedImage />
     </Layout>

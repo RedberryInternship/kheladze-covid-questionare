@@ -76,14 +76,17 @@ const CovidForm = () => {
 
     const { had_antibody_test, had_covid, ...testDate_number } = data;
 
-    console.log(testDate_number);
     if (watchAntibody === "true") {
+      let antibodies = null;
+      if (testDate_number.test_date) {
+        antibodies = { test_date: testDate_number.test_date };
+      }
       localStorage.setItem(
         "covid",
         JSON.stringify({
           had_antibody_test,
           had_covid,
-          antibodies: { test_date: testDate_number.test_date },
+          antibodies: antibodies,
         })
       );
     } else {
