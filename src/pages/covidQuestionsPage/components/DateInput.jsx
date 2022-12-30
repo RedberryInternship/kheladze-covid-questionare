@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import useDateInput from "../hooks/useDateInput";
 
 const DateInput = ({ name, placeholder, register, set, trigger }) => {
-  const [startDate, setStartDate] = useState("");
-  useEffect(() => {
-    set(name, startDate);
-    trigger && trigger(name);
-  }, [startDate]);
+  const [startDate, setStartDate] = useDateInput(name, set, trigger);
 
   return (
     <>
