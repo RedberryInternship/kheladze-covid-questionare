@@ -4,6 +4,7 @@ import Left from "@/assets/left.png";
 
 import { Link, useNavigate } from "react-router-dom";
 import { useForm, useWatch } from "react-hook-form";
+import DateInput from "./DateInput";
 
 const CovidForm = () => {
   const navigate = useNavigate();
@@ -17,6 +18,8 @@ const CovidForm = () => {
     handleSubmit,
     formState: { errors },
     getValues,
+    trigger,
+    setValue,
     setError,
     control,
   } = useForm({
@@ -80,7 +83,7 @@ const CovidForm = () => {
         JSON.stringify({
           had_antibody_test,
           had_covid,
-          antibodies: { ...testDate_number },
+          antibodies: { test_date: testDate_number.test_date },
         })
       );
     } else {
@@ -160,10 +163,15 @@ const CovidForm = () => {
       >
         მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) <br /> როდის გქონდა Covid-19*
       </p>
-      <Input
+      <DateInput
         name="covid_sickness_date"
-        id="covid_sickness_date"
-        type="date"
+        placeholder={
+          defaultValues.covid_sickness_date
+            ? defaultValues.covid_sickness_date
+            : "დდ/თთ/წწ"
+        }
+        trigger={trigger}
+        set={setValue}
         register={
           watchAntibody === "false" ? register("covid_sickness_date") : null
         }
@@ -176,12 +184,13 @@ const CovidForm = () => {
         თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი <br /> რიცხვი და
         ანტისხეულების რაოდენობა*
       </p>
-      <Input
-        id="test_date"
+      <DateInput
         name="test_date"
-        type="date"
-        placeholder="რიცხვი"
-        register={watchAntibody === "true" ? register("test_date") : null}
+        placeholder={
+          defaultValues.test_date ? defaultValues.test_date : "რიცხვი"
+        }
+        set={setValue}
+        register={watchAntibody === "false" ? register("test_date") : null}
       />
       <Input
         name="number"

@@ -19,21 +19,25 @@ const SuggestionForm = () => {
 
   const {
     register,
-    unregister,
     handleSubmit,
     formState: { errors },
     getValues,
-    control,
   } = useForm({
     defaultValues: defaultValues,
     resolver: yupResolver(schema),
   });
   const onFormSubmit = (data) => {
-    const vaccination = JSON.parse(localStorage.getItem("vaccination"));
+    const { had_vaccine, vaccination_stage, i_am_waiting } = JSON.parse(
+      localStorage.getItem("vaccination")
+    );
+
+    const vaccine = had_vaccine === "true" ? true : false;
     const identify = JSON.parse(localStorage.getItem("identify"));
     const covid = JSON.parse(localStorage.getItem("covid"));
     const completeData = {
-      ...vaccination,
+      had_vaccine: vaccine,
+      vaccination_stage,
+      i_am_waiting,
       ...identify,
       ...covid,
       ...data,
@@ -41,8 +45,11 @@ const SuggestionForm = () => {
 
     fetch("https://covid19.devtest.ge/api/create", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: completeData,
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(completeData),
     })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
