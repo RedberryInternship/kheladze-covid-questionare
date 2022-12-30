@@ -1,6 +1,6 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import useDateInput from "../hooks/useDateInput";
+import { useDateInput } from "../hooks";
 
 const DateInput = ({ name, placeholder, register, set, trigger }) => {
   const [startDate, setStartDate] = useDateInput(name, set, trigger);
