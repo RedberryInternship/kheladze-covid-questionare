@@ -61,8 +61,6 @@ npm run dev
 
 ##### Now, you should be good to go!
 
-#
-
 ### Project Structure
 
 ├─── public
