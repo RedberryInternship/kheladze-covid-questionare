@@ -4,7 +4,7 @@ import SuggestionForm from "./components/SuggestionForm";
 
 const SuggestionsPage = () => {
   return (
-    <Layout>
+    <Layout num={4}>
       <SuggestionForm />
       <AnimatedImage />
     </Layout>

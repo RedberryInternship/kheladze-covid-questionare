@@ -5,7 +5,7 @@ import AnimatedImage from "./components/AnimatedImage";
 
 const IdentifyPage = () => {
   return (
-    <Layout>
+    <Layout num={1}>
       <div className="flex justify-between">
         <IdentifyForm />
         <AnimatedImage />
