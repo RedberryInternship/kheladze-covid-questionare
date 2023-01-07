@@ -1,6 +1,5 @@
 import { Layout } from "@/components";
-import AnimatedImage from "./components/AnimatedImage";
-import CovidForm from "./components/CovidForm";
+import { AnimatedImage, CovidForm } from "./components";
 
 const CovidQuestionsPage = () => {
   return (

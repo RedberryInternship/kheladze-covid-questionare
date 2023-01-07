@@ -1,6 +1,5 @@
 import { Layout } from "@/components";
-import AnimatedImage from "./components/AnimatedImage";
-import SuggestionForm from "./components/SuggestionForm";
+import { AnimatedImage, SuggestionForm } from "./components";
 
 const SuggestionsPage = () => {
   return (

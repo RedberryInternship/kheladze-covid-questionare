@@ -1,7 +1,7 @@
 import { Layout } from "@/components";
 
-import IdentifyForm from "./components/IdentifyForm";
-import AnimatedImage from "./components/AnimatedImage";
+import { IdentifyForm, AnimatedImage } from "./components";
+// import AnimatedImage from "./components/AnimatedImage/AnimatedImage";
 
 const IdentifyPage = () => {
   return (

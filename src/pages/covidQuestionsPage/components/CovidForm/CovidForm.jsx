@@ -2,9 +2,11 @@ import { Radio, Input, NavButtons } from "@/components";
 import Right from "@/assets/right.png";
 import Left from "@/assets/left.png";
 
+import { DateInput } from "../DateInput";
+import useCovidForm from "./useCovidForm";
+
 import { Link, useNavigate } from "react-router-dom";
-import { useForm, useWatch } from "react-hook-form";
-import DateInput from "./DateInput";
+import { useWatch } from "react-hook-form";
 
 const CovidForm = () => {
   const navigate = useNavigate();
@@ -12,6 +14,7 @@ const CovidForm = () => {
   let defaultValues = JSON.parse(localStorage.getItem("covid"))
     ? JSON.parse(localStorage.getItem("covid"))
     : {};
+
   const {
     register,
     unregister,
@@ -22,9 +25,7 @@ const CovidForm = () => {
     setValue,
     setError,
     control,
-  } = useForm({
-    defaultValues: defaultValues,
-  });
+  } = useCovidForm(defaultValues);
   const watchCovid = useWatch({
     control,
     name: "had_covid",
