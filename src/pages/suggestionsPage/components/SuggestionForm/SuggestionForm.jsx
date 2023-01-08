@@ -60,7 +60,8 @@ const SuggestionForm = () => {
     <form
       onChange={onFormChange}
       onSubmit={handleSubmit(onFormSubmit)}
-      className="flex flex-col gap-11 mt-11 w-606 overflow-scroll h-750"
+      className="flex flex-col gap-11 mt-11 w-606 overflow-auto h-750"
+      id="scroll"
     >
       <div className="text-22">
         <p className=" mb-5">

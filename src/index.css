@@ -84,3 +84,7 @@ body {
   border-radius: 50%;
   background: #232323;
 }
+
+#scroll::-webkit-scrollbar {
+  opacity: 0;
+}
