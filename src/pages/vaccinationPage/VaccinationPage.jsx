@@ -1,7 +1,5 @@
 import { Layout } from "@/components";
-
-import VaccinationForm from "./components/VaccinationForm";
-import AnimatedImage from "./components/AnimatedImage";
+import { VaccinationForm, AnimatedImage } from "./components";
 
 const VaccinationPage = () => {
   return (

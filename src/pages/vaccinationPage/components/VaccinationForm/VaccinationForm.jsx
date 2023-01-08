@@ -1,11 +1,11 @@
 import { Radio, NavButtons } from "@/components";
 import Right from "@/assets/right.png";
 import Left from "@/assets/left.png";
+import { useFormSchema } from "@/hooks";
 
 import { useNavigate, Link } from "react-router-dom";
-import { useForm, useWatch } from "react-hook-form";
+import { useWatch } from "react-hook-form";
 import * as Yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 
 const VaccinationForm = () => {
   const navigate = useNavigate();
@@ -32,10 +32,7 @@ const VaccinationForm = () => {
     formState: { errors },
     getValues,
     control,
-  } = useForm({
-    defaultValues: defaultValues,
-    resolver: yupResolver(schema),
-  });
+  } = useFormSchema(defaultValues, schema);
   const watchVaccine = useWatch({
     control,
     name: "had_vaccine",

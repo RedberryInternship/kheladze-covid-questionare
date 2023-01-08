@@ -1,10 +1,10 @@
 import { Input, NavButtons } from "@/components";
 import Line from "@/assets/lin.png";
 import Right from "@/assets/right.png";
+import { useFormSchema } from "@/hooks";
 
-import { useForm } from "react-hook-form";
 import * as Yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+
 import { useNavigate } from "react-router-dom";
 
 const IdentifyForm = () => {
@@ -29,10 +29,7 @@ const IdentifyForm = () => {
     formState: { errors },
     getValues,
     trigger,
-  } = useForm({
-    defaultValues: defaultValues,
-    resolver: yupResolver(schema),
-  });
+  } = useFormSchema(defaultValues, schema);
 
   const onFormSubmit = (data) => {
     console.log(data, errors);

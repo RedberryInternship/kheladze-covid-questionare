@@ -1,10 +1,9 @@
 import { Radio, NavButtons } from "@/components";
 import Left from "@/assets/left.png";
+import { useFormSchema } from "@/hooks";
 
 import { Link, useNavigate } from "react-router-dom";
-import { useForm, useWatch } from "react-hook-form";
 import * as Yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 
 const SuggestionForm = () => {
   const navigate = useNavigate();
@@ -22,10 +21,7 @@ const SuggestionForm = () => {
     handleSubmit,
     formState: { errors },
     getValues,
-  } = useForm({
-    defaultValues: defaultValues,
-    resolver: yupResolver(schema),
-  });
+  } = useFormSchema(defaultValues, schema);
   const onFormSubmit = (data) => {
     const { had_vaccine, vaccination_stage, i_am_waiting } = JSON.parse(
       localStorage.getItem("vaccination")
