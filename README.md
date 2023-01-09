@@ -71,7 +71,12 @@ npm run dev
 │ ├─── components
 │ ├─── font
 │ ├─── pages
-│ ├───├─── components
+│ ├───├─── Page
+│ ├───├───├─── components
+│ ├───├───├───├─── PageComponent.js
+│ ├───├───├───├─── index.js
+│ ├───├───├─── Page.js
+│ ├───├───├─── index.js
 │ ├───├─── index.js
 │ ├─── App.jsx
 │ ├─── index.css
