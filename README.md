@@ -71,13 +71,7 @@ npm run dev
 │ ├─── components
 │ ├─── font
 │ ├─── pages
-│ ├───├─── covidQuestionsPage
-│ ├───├─── identifyPage
-│ ├───├─── landingPage
-│ ├───├─── notFound
-│ ├───├─── suggestionsPage
-│ ├───├─── thanks
-│ ├───├─── vaccinationPage
+│ ├───├─── components
 │ ├───├─── index.js
 │ ├─── App.jsx
 │ ├─── index.css
