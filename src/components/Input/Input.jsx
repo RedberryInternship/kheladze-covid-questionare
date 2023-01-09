@@ -6,7 +6,7 @@ const Input = ({ name, type, label, placeholder, register, blur, error }) => {
       </label>
 
       <input
-        className={`h-12 border border-neutral-800 bg-inherit pl-5 placeholder:text-neutral-800 placeholder:text-lg `}
+        className={`h-12 border border-neutral-800 bg-inherit pl-5 placeholder:text-neutral-600 placeholder:text-lg `}
         id={name}
         type={type}
         placeholder={placeholder}
