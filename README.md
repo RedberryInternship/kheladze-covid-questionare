@@ -63,7 +63,7 @@ npm run dev
 
 ### Project Structure
 
-``
+```bash
 
 ├─── public
 ├─── src
@@ -85,4 +85,4 @@ npm run dev
 ├─── index.html
 ├─── package-lock.json
 ├─── package.json
-``
+```
