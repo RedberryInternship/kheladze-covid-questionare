@@ -63,7 +63,7 @@ npm run dev
 
 ### Project Structure
 
-``
+```bash
 
 ├─── public
 ├─── src
@@ -71,13 +71,12 @@ npm run dev
 │ ├─── components
 │ ├─── font
 │ ├─── pages
-│ ├───├─── covidQuestionsPage
-│ ├───├─── identifyPage
-│ ├───├─── landingPage
-│ ├───├─── notFound
-│ ├───├─── suggestionsPage
-│ ├───├─── thanks
-│ ├───├─── vaccinationPage
+│ ├───├─── Page
+│ ├───├───├─── components
+│ ├───├───├───├─── PageComponent.js
+│ ├───├───├───├─── index.js
+│ ├───├───├─── Page.js
+│ ├───├───├─── index.js
 │ ├───├─── index.js
 │ ├─── App.jsx
 │ ├─── index.css
@@ -85,4 +84,4 @@ npm run dev
 ├─── index.html
 ├─── package-lock.json
 ├─── package.json
-``
+```
