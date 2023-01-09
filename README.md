@@ -29,7 +29,7 @@ The Covid Questionnaire is an application that new employees must complete to un
 - <img src="/readme/assets/react.png" height="18" style="position: relative; top: 4px" /> [React @16.11.0](https://reactjs.org/) - front-end framework
 - <img src="/readme/assets/react-router.png" height="18" style="position: relative; top: 4px" /> [React router dom @6.6.0](https://reactrouter.com/en/main) - routing tool
 - <img src="/readme/assets/framer.png" height="18" style="position: relative; top: 4px; width: 18px" /> [Framer-Motion](https://www.framer.com/) - Animation tool
-- <img src="/images/vite.png" height="18" style="position: relative; top: 4px; width: 18px" /> [Vite](https://vitejs.dev/guide/) - rapid development tool
+- <img src="/readme/assets/vite.png" height="18" style="position: relative; top: 4px; width: 18px" /> [Vite](https://vitejs.dev/guide/) - rapid development tool
 
 #
 
