@@ -76,14 +76,13 @@ const SuggestionForm = () => {
         </p>
       </div>
       <div className="flex flex-col gap-5">
-        <p
-          className={`text-22 font-bold ${
-            errors.non_formal_meetings && "text-orange-600"
-          }`}
-        >
+        <div className="text-2xl h-36 font-bold">
           რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ შეხვედრები,
           სადაც ყველა სურვილისამებრ ჩაერთვება?*
-        </p>
+          <p className="text-orange-600">
+            {errors.non_formal_meetings ? "სავალდებულო" : null}
+          </p>
+        </div>
         <Radio
           name="non_formal_meetings"
           label="კვირაში ორჯერ"
@@ -114,13 +113,12 @@ const SuggestionForm = () => {
         />
       </div>
       <div className="flex flex-col gap-5">
-        <p
-          className={`text-22 font-bold ${
-            errors.number_of_days_from_office && "text-orange-600"
-          }`}
-        >
+        <div className="text-2xl h-20 font-bold">
           კვირაში რამდენი დღე ისურვებდი ოფისიდან მუშაობას?*
-        </p>
+          <p className="text-orange-600">
+            {errors.number_of_days_from_office ? "სავალდებულო" : null}
+          </p>
+        </div>
         <Radio
           name="number_of_days_from_office"
           label="0"

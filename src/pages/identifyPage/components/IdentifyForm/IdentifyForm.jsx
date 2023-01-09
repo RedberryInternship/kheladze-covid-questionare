@@ -16,7 +16,9 @@ const IdentifyForm = () => {
     last_name: Yup.string()
       .min(2, "გვარი უნდა შედგებოდეს მინიმუმ 2 სიმბოლოსგან")
       .required("სავალდებულო"),
-    email: Yup.string().matches("@redberry.ge").required("სავალდებულო"),
+    email: Yup.string()
+      .matches("@redberry.ge", "გამოიყენეთ რედბერის მეილი")
+      .required("სავალდებულო"),
   });
 
   let defaultValues = JSON.parse(localStorage.getItem("identify"))

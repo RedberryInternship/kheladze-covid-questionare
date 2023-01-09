@@ -103,13 +103,12 @@ const CovidForm = () => {
 
   const hadCovid = (
     <div className="flex flex-col gap-6 mt-10">
-      <p
-        className={`text-2xl font-bold ${
-          errors.had_covid ? "text-orange-600" : ""
-        }`}
-      >
+      <div className="text-2xl h-16 font-bold">
         გაქვს გადატანილი Covid-19?*
-      </p>
+        <p className="text-orange-600">
+          {errors.had_covid ? errors.had_covid.message : null}
+        </p>
+      </div>
       <Radio
         name="had_covid"
         id="yes"
@@ -135,13 +134,12 @@ const CovidForm = () => {
   );
   const hadAntibodyTest = (
     <div className="flex flex-col gap-6">
-      <p
-        className={`text-2xl font-bold ${
-          errors.had_antibody_test ? "text-orange-600" : ""
-        }`}
-      >
+      <div className="text-2xl h-16 font-bold">
         ანტისხეულების ტესტი გაქვს გაკეთებული?*
-      </p>
+        <p className="text-orange-600">
+          {errors.had_antibody_test ? errors.had_antibody_test.message : null}
+        </p>
+      </div>
       <Radio
         name="had_antibody_test"
         id="test_yes"
@@ -160,13 +158,14 @@ const CovidForm = () => {
   );
   const covidSicknessDate = (
     <div>
-      <p
-        className={`text-2xl font-bold ${
-          errors.covid_sickness_date ? "text-orange-600" : ""
-        }`}
-      >
+      <div className="text-2xl h-20 font-bold">
         მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) <br /> როდის გქონდა Covid-19*
-      </p>
+        <p className="text-orange-600">
+          {errors.covid_sickness_date
+            ? errors.covid_sickness_date.message
+            : null}
+        </p>
+      </div>
       <DateInput
         name="covid_sickness_date"
         placeholder={

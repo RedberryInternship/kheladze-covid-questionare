@@ -49,13 +49,12 @@ const VaccinationForm = () => {
 
   const hadVaccine = (
     <div className="flex flex-col gap-5 mt-11">
-      <p
-        className={`text-2xl font-bold ${
-          errors.had_vaccine && "text-orange-600"
-        }`}
-      >
+      <div className="text-2xl h-16 font-bold">
         უკვე აცრილი ხარ?*
-      </p>
+        <p className="text-orange-600">
+          {errors.had_vaccine ? "სავალდებულო" : null}
+        </p>
+      </div>
       <Radio
         name="had_vaccine"
         value={true}
@@ -87,13 +86,12 @@ const VaccinationForm = () => {
   const vaccinationStage = (
     <>
       <div className="mt-14 flex flex-col gap-4">
-        <p
-          className={`text-2xl font-bold ${
-            errors.vaccination_stage && "text-orange-600"
-          }`}
-        >
+        <div className="text-2xl h-16 font-bold">
           აირჩიე რა ეტაპზე ხარ*
-        </p>
+          <p className="text-orange-600">
+            {errors.vaccination_stage ? "სავალდებულო" : null}
+          </p>
+        </div>
         <Radio
           name="vaccination_stage"
           value="first_dosage_and_registered_on_the_second"
@@ -141,13 +139,12 @@ const VaccinationForm = () => {
   const waiting = (
     <>
       <div className="mt-14 flex flex-col gap-4">
-        <p
-          className={`text-2xl font-bold ${
-            errors.i_am_waiting && "text-orange-600"
-          }`}
-        >
+        <div className="text-2xl h-16 font-bold">
           რას ელოდები?*
-        </p>
+          <p className="text-orange-600">
+            {errors.i_am_waiting ? "სავალდებულო" : null}
+          </p>
+        </div>
         <Radio
           name="i_am_waiting"
           label="დარეგისტრირებული ვარ და ველოდები რიცხვს"
